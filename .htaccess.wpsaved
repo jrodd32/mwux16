@@ -1,0 +1,5 @@
+
+AuthType Basic
+AuthUserFile "/home/midwestux/www/2016-dev/.htpasswd"
+AuthName Limited!
+require valid-user

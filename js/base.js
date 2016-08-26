@@ -22,6 +22,7 @@ function prepVideo(){
         if (!(/^https?:\/\/player.vimeo.com/).test(event.origin)) {
             return false;
         }
+<<<<<<< HEAD
         
         if (playerOrigin === '*') {
             playerOrigin = event.origin;
@@ -29,11 +30,24 @@ function prepVideo(){
         
         var data = JSON.parse(event.data);
         
+=======
+
+        if (playerOrigin === '*') {
+            playerOrigin = event.origin;
+        }
+
+        var data = JSON.parse(event.data);
+
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
         switch (data.event) {
             case 'ready':
                 onReady();
                 break;
+<<<<<<< HEAD
                
+=======
+
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
             case 'finish':
                 onFinish();
                 break;
@@ -44,7 +58,11 @@ function prepVideo(){
 	var playbtn = document.getElementsByClassName('play-btn');
 
     $(playbtn).on('click', function() {
+<<<<<<< HEAD
     	post("seekTo", "0");//restart 
+=======
+    	post("seekTo", "0");//restart
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
         post("play");
     });
 
@@ -74,11 +92,19 @@ function prepVideo(){
         var data = {
           method: action
         };
+<<<<<<< HEAD
         
         if (value) {
             data.value = value;
         }
         
+=======
+
+        if (value) {
+            data.value = value;
+        }
+
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
         var message = JSON.stringify(data);
 
         // console.log("message " + message);
@@ -91,7 +117,11 @@ function prepVideo(){
     function onReady() {
 
         status.text('ready');
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
         post('addEventListener', 'pause');
         post('addEventListener', 'finish');
         post('addEventListener', 'playProgress');
@@ -101,7 +131,11 @@ function prepVideo(){
 
         status.text('finished');
     }
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
 
 function onNavLogoClick(){
 
@@ -116,7 +150,11 @@ function onAboutClick(){
 	closeMenu();
 
 	var about = document.getElementById("about-section");
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
 	$('html, body').animate({
                         scrollTop: $(about).offset().top
                     }, 600);
@@ -139,26 +177,40 @@ function onTeamClick(){
 
 
 function onSubscribeClick(){
+<<<<<<< HEAD
 
+=======
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
 	closeMenu();
 
 	var subscribeModal = document.getElementById("subscribe_modal");
 	var subscribeSection = document.getElementById("subscribe_section");
+<<<<<<< HEAD
 
 	/* if we're on mobile or a small screen, we want to avoid modals*/
 
 	if (subscribeSection && $(subscribeSection).css('display') != "none")
 	{
+=======
+	/* if we're on mobile or a small screen, we want to avoid modals*/
+
+	if (subscribeSection && $(subscribeSection).css('display') != "none") {
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
 		$('html, body').animate({
                         scrollTop: $(subscribeSection).offset().top
                     }, 600);
 
 	} else if(subscribeSection){
+<<<<<<< HEAD
 
 		$(subscribeModal).modal('show');
 	}
 
 	
+=======
+		$(subscribeModal).modal('show');
+	}
+>>>>>>> ef2200aa7329e9ad22b736e5fc7c88340a75d5d1
 }
 
 

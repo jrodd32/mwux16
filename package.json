@@ -1,0 +1,13 @@
+{
+    "name": "mwux16",
+    "version": "0.1.0",
+    "domain": "Silencio",
+    "themesPath": "wp-content/themes",
+    "dependencies": {
+        "grunt": "~0.4.4",
+        "grunt-contrib-copy": "~0.5.0",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-shell": "~0.7.0",
+        "grunt-hub": "~0.6.2",
+    }
+}
